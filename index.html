@@ -1,63 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
   <title>Gorkhe Achaar</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body>
 
-<body style="font-family: Arial, sans-serif; padding: 20px;">
+<header>
+  <h1>Gorkhe Achaar</h1>
+  <p>Authentic Himalayan Pickles</p>
+</header>
 
-  <h1 style="text-align:center;">Gorkhe Achaar</h1>
-  <p style="text-align:center;">Authentic Homemade Pickles & Traditional Foods</p>
-
-  <hr>
-
+<section>
   <h2>Our Products</h2>
 
-  <ul>
-    <li>Gorkhe Achaar – Dalle Khursani</li>
-    <li>Gorkhe Achaar – Baas ko Achaar</li>
-    <li>Gorkhe Achaar – Sungur ko Achaar</li>
-    <li>Gorkhe Achaar – Mula ko Achaar</li>
-    <li>Gorkhe Achaar – Titaura</li>
-    <li>Gorkhe Achaar – Kinema</li>
-  </ul>
+  <div class="products">
 
-  <hr>
+    <div class="card">
+      <img src="images/dalle1.jpg">
+      <img src="images/dalle2.jpg">
+      <h3>Dalle Khursani Achaar</h3>
 
-  <h2>Place Order</h2>
+      <select onchange="updatePrice(this)">
+        <option value="160">125g – ₹160</option>
+        <option value="300">250g – ₹300</option>
+      </select>
 
-  <form>
-    <label>Name:</label><br>
-    <input type="text" required><br><br>
+      <p>Price: ₹<span>160</span></p>
+      <button onclick="orderNow('Dalle Khursani Achaar')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/Baas1.jpg">
+      <img src="images/Baas2.jpg">
+      <h3>Baas Ko Achaar</h3>
 
-    <label>Mobile Number:</label><br>
-    <input type="tel" required><br><br>
+      <select onchange="updatePrice(this)">
+        <option value="220">125g – ₹220</option>
+        <option value="400">250g – ₹400</option>
+      </select>
 
-    <label>Select Product:</label><br>
-    <select>
-      <option>Dalle Khursani</option>
-      <option>Baas ko Achaar</option>
-      <option>Sungur ko Achaar</option>
-      <option>Mula ko Achaar</option>
-      <option>Titaura</option>
-      <option>Kinema</option>
-    </select><br><br>
+      <p>Price: ₹<span>220</span></p>
+      <button onclick="orderNow('Baas Ko Achaar')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/Mula1.jpg">
+      <img src="images/Mula2.jpg">
+      <h3>Mula Ko Achaar</h3>
 
-    <label>Size:</label><br>
-    <select>
-      <option>250g</option>
-      <option>500g</option>
-      <option>1kg</option>
-    </select><br><br>
+      <select onchange="updatePrice(this)">
+        <option value="110">125g – ₹110</option>
+        <option value="200">250g – ₹200</option>
+      </select>
 
-    <button type="submit">Submit Order</button>
-  </form>
+      <p>Price: ₹<span>110</span></p>
+      <button onclick="orderNow('Mula Ko Achaar')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/Sungur1.jpg">
+      <img src="images/Sungur2.jpg">
+      <h3>Sungur Ko Achaar</h3>
 
-  <p style="margin-top:20px; font-size:12px;">
-    Note: This is a demo order form. Orders will be confirmed via phone.
-  </p>
+      <select onchange="updatePrice(this)">
+        <option value="220">125g – ₹220</option>
+        <option value="400">250g – ₹400</option>
+      </select>
 
+      <p>Price: ₹<span>220</span></p>
+      <button onclick="orderNow('Sumgur Ko Achaar')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/Titaura1.jpg">
+      <img src="images/Titaura2.jpg">
+      <h3>Titaura</h3>
+
+      <select onchange="updatePrice(this)">
+        <option value="120">125g – ₹120</option>
+        <option value="200">250g – ₹200</option>
+      </select>
+
+      <p>Price: ₹<span>120</span></p>
+      <button onclick="orderNow('Titaura')">Order Now</button>
+    </div>
+    <div class="card">
+      <img src="images/Kinema1.jpg">
+      <img src="images/Kinema.jpg">
+      <h3>Kinema Ko Achaar</h3>
+
+      <select onchange="updatePrice(this)">
+        <option value="160">125g – ₹160</option>
+        <option value="300">250g – ₹300</option>
+      </select>
+
+      <p>Price: ₹<span>160</span></p>
+      <button onclick="orderNow('Kinema Ko Achaar')">Order Now</button>
+    </div>
+    
+  </div>
+</section>
+
+<section>
+  <h2>How We Make It</h2>
+  <video width="100%" controls>
+    <source src="images/process.mp4" type="video/mp4">
+  </video>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
