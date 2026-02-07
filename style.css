@@ -1,11 +1,15 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: url("images/himalaya.jpg") no-repeat center center fixed;
+  background: linear-gradient(
+      rgba(255,255,255,0.85),
+      rgba(255,255,255,0.85)
+    ),
+    url("images/himalaya.jpg");
   background-size: cover;
-  color: #222;
+  background-attachment: fixed;
+  background-position: center;
 }
-
 header {
   background: rgba(255, 255, 255, 0.85);
   padding: 25px;
@@ -50,3 +54,4 @@ button {
   padding: 8px 14px;
   border-radius: 5px;
 }
+
