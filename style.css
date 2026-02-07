@@ -1,70 +1,52 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #f5f7f2;
-  color: #2f2f2f;
+  font-family: Arial, sans-serif;
+  background: url("images/himalaya.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #222;
 }
 
 header {
-  header {
-  background: 
-    linear-gradient(
-      rgba(0, 0, 0, 0.45),
-      rgba(0, 0, 0, 0.45)
-    ),
-    url("images/himalaya.jpg") center / cover no-repeat;
-
-  padding: 70px 20px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 25px;
   text-align: center;
 }
 
 header h1 {
-  header h1 {
-  font-size: 44px;
-  margin: 0;
-  color: #7a1f1f; /* maroon */
-  font-weight: bold;
+  color: maroon;
+  font-size: 36px;
+  margin-bottom: 5px;
 }
 
 header p {
-  color: #f3f3f3;
-  font-size: 18px;
-}
-}
-
-header p {
-  font-size: 18px;
+  font-size: 16px;
+  color: #444;
 }
 
 section {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 20px;
   padding: 20px;
-}
-
-.products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 15px;
-}
-
-.card {
-  background: white;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.card img {
-  width: 100%;
   border-radius: 10px;
 }
 
-button {
-  background: #7a1f1f;
-  color: white;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 8px;
-  font-size: 16px;
+.product {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
 }
 
+.product img {
+  width: 130px;
+  height: auto;
+  border-radius: 8px;
+  margin-right: 10px;
+}
+
+button {
+  background: maroon;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
