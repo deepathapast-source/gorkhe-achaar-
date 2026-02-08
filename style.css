@@ -1,5 +1,5 @@
+/* ----- Body & Background ----- */
 body {
-  body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-image: url("images/himalaya.jpg");
@@ -8,6 +8,8 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+/* ----- Header ----- */
 header {
   background: rgba(255, 255, 255, 0.85);
   padding: 25px;
@@ -25,43 +27,24 @@ header p {
   color: #444;
 }
 
-section {
-  background: rgba(255, 255, 255, 0.9);
+/* ----- Section / Container ----- */
+section, .container {
+  background: rgba(255, 255, 255, 0.85);
   margin: 20px;
   padding: 20px;
   border-radius: 10px;
 }
 
-.product {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-}
-
-.product img {
-  width: 100%;       /* makes it fill the product card width */
-  max-width: 200px;  /* maximum width to keep all images uniform */
-  height: auto;      /* maintain aspect ratio */
-  border-radius: 8px;
-  margin-bottom: 10px;
-}
-
-button {
-  background: maroon;
-  color: white;
-  border: none;
-  padding: 8px 14px;
-  border-radius: 5px;
-}
-
+/* ----- Products Grid ----- */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+/* ----- Individual Product Card ----- */
 .product {
-  background: white;
+  background: rgba(255, 255, 255, 0.9);
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -70,12 +53,7 @@ button {
   align-items: center;
 }
 
-.container {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 20px;
-  border-radius: 10px;
-}
-
+/* ----- Product Images ----- */
 .image-wrapper {
   width: 180px;          /* fixed width for all images */
   height: 180px;         /* fixed height for all images */
@@ -88,4 +66,35 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;     /* fills container, keeps aspect ratio, crops if needed */
+  margin-bottom: 10px;
+}
+
+/* ----- Buttons ----- */
+button {
+  background: maroon;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ----- Select Dropdown ----- */
+select {
+  padding: 5px;
+  margin: 5px 0;
+}
+
+/* ----- Video Section ----- */
+.video-section {
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+}
+
+.video-section video {
+  max-width: 100%;
+  border-radius: 10px;
 }
