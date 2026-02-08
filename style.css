@@ -1,4 +1,4 @@
-/* ----- Body & Background ----- */
+/* ----- Body & Main Background ----- */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -12,53 +12,55 @@ body {
 /* ----- Header Banner ----- */
 .header-banner {
   position: relative;
-  height: 280px;
-  background: url("images/logo.png") no-repeat center center;
-  background-size: contain;
+  height: 280px; /* smaller height */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background: url("images/himalaya.jpg") no-repeat center center;
+  background-size: cover;
 }
 
-/* ----- Overlay to slightly darken logo if needed ----- */
+/* Overlay box with logo background */
 .header-banner .overlay {
-  background: rgba(0,0,0,0.3); /* optional, keeps logo visible */
-  padding: 10px 20px;          /* reduced height */
+  background: url("images/logo.png") no-repeat center center;
+  background-size: contain;  /* fits logo inside overlay */
+  padding: 20px 30px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: white;
 }
 
-/* ----- Main Heading (Gorkhe Achaar) ----- */
+/* Main Heading */
 .header-banner h1 {
   font-family: 'Anton', 'Impact', sans-serif;
-  font-size: 64px;  /* larger */
-  color: maroon;
-  -webkit-text-stroke: 1.5px #FFDB58; /* mustard outline */
-  text-stroke: 1.5px #FFDB58;
-  margin-top: 30px;  /* lower inside overlay */
+  font-size: 64px; /* larger font */
+  margin-top: 30px; /* push text lower */
   margin-bottom: 5px;
+  color: maroon;
+  -webkit-text-stroke: 2px #FFDB58; /* mustard outline */
+  text-stroke: 2px #FFDB58;
   line-height: 1.1;
   text-align: center;
 }
 
-/* ----- Subtitle ----- */
+/* Subtitle */
 .header-banner p {
   font-size: 16px;
   margin-bottom: 5px;
   color: white;
 }
 
-/* ----- Manufacturer Info ----- */
+/* Manufacturer Info */
 .header-banner .manufacturer {
   font-size: 14px;
-  line-height: 0.8; /* lines closer */
+  line-height: 0.8; /* reduced spacing */
   text-align: center;
-  color: white;
   margin-top: 5px;
+  color: white;
 }
 
 /* ----- Products Grid ----- */
@@ -72,7 +74,7 @@ body {
 
 /* ----- Individual Product Card ----- */
 .product {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255,255,255,0.9);
   padding: 15px;
   border-radius: 10px;
   text-align: center;
@@ -83,9 +85,9 @@ body {
 
 /* ----- Product Images ----- */
 .image-wrapper {
-  width: 180px;
-  height: 180px;
-  overflow: hidden;
+  width: 180px;          /* fixed width for all images */
+  height: 180px;         /* fixed height for all images */
+  overflow: hidden;      /* crops excess parts */
   border-radius: 8px;
   margin: 5px auto;
 }
@@ -93,7 +95,7 @@ body {
 .image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover;     /* fills container, keeps aspect ratio, crops if needed */
   margin-bottom: 10px;
 }
 
