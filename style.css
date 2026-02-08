@@ -57,9 +57,10 @@ body {
 
 /* Manufacturer Info */
 .header-banner .manufacturer p {
-  margin: 2px 0;  /* top & bottom margin reduced */
+  margin: 0;          /* removes all default spacing */
+  padding: 0;         /* ensures no padding adds extra space */
+  line-height: 1;     /* tight spacing between lines */
   font-size: 14px;
-  line-height: 1; /* tight spacing */
   color: white;
   text-align: center;
 }
