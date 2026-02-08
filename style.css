@@ -112,7 +112,7 @@ button {
 .video-section {
   text-align: center;
   padding: 20px;
-  margin: 20px;
+  margin: 20px 20px 10px 20px; /* top, right, bottom, left */
   background: rgba(255,255,255,0.85);
   border-radius: 10px;
 }
