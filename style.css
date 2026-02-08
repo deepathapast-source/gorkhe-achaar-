@@ -1,4 +1,4 @@
-/* ---------------- Body & Main Background ---------------- */
+/* ----- Body & Main Background ----- */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -6,10 +6,10 @@ body {
   background-size: cover;
 }
 
-/* ---------------- Header Banner ---------------- */
+/* ----- Header Banner ----- */
 .header-banner {
   position: relative;
-  height: 350px;
+  height: 300px;
   background: url("images/bg.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
@@ -20,50 +20,51 @@ body {
 
 .header-banner .overlay {
   background: rgba(0,0,0,0.5);
-  padding: 20px;
   border-radius: 10px;
+  padding: 25px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-/* Logo */
+/* Logo above heading */
 .header-banner .logo {
-  width: 120px;
+  width: 100px;
   height: auto;
   margin-bottom: 15px;
-  z-index: 10;
+  z-index: 2;
 }
 
 /* Main Heading */
 .header-banner h1 {
-  font-family: 'Anton', sans-serif;
-  font-size: 48px;
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-size: 50px;
   color: maroon;
-  -webkit-text-stroke: 2px #FFDB58; /* mustard outline */
-  text-stroke: 2px #FFDB58;
+  -webkit-text-stroke: 1.5px #FFDB58; /* outline */
+  text-stroke: 1.5px #FFDB58;
   margin: 5px 0;
   line-height: 1.1;
 }
 
 /* Subtitle */
-.header-banner p.subtitle {
+.header-banner .subtitle {
   font-family: 'Great Vibes', cursive;
-  font-size: 22px;
   color: deepskyblue;
-  margin: 5px 0 10px 0;
+  font-size: 20px;
+  margin-bottom: 10px;
 }
 
 /* Manufacturer Info */
 .header-banner .manufacturer {
   font-size: 14px;
-  line-height: 1.1; /* tight line spacing */
+  line-height: 0.9; /* tight spacing */
   color: white;
-  margin-top: 5px;
+  text-align: center;
+  margin-top: 10px;
 }
 
-/* ---------------- Products Grid ---------------- */
+/* ----- Products Grid ----- */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -97,13 +98,12 @@ body {
   object-fit: cover;
 }
 
-/* Select Dropdown */
+/* Buttons and Select */
 select {
   padding: 5px;
   margin: 5px 0;
 }
 
-/* Buttons */
 button {
   background: maroon;
   color: white;
@@ -113,11 +113,11 @@ button {
   cursor: pointer;
 }
 
-/* ---------------- Video Section ---------------- */
+/* ----- Video Section ----- */
 .video-section {
   text-align: center;
   padding: 20px;
-  margin: 20px 20px 10px 20px; /* reduce bottom margin */
+  margin: 20px 20px 10px 20px; /* reduced bottom margin for footer gap */
   background: rgba(255,255,255,0.85);
   border-radius: 10px;
 }
@@ -127,36 +127,38 @@ button {
   border-radius: 10px;
 }
 
-/* ---------------- Footer ---------------- */
+/* ----- Footer ----- */
 .footer {
-  text-align: center;
-  font-size: 14px;
-  padding: 10px 20px;
   background: rgba(0,0,0,0.6);
   color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
 }
 
-/* ---------------- Responsive ---------------- */
-@media (min-width: 768px) {
+/* ----- Responsive Adjustments ----- */
+@media (max-width: 768px) {
   .header-banner h1 {
-    font-size: 64px;
+    font-size: 40px;
   }
-  .header-banner p.subtitle {
-    font-size: 28px;
-  }
+
   .header-banner .logo {
-    width: 150px;
+    width: 80px;
   }
-}
 
-@media (max-width: 480px) {
-  .header-banner h1 {
-    font-size: 36px;
-  }
-  .header-banner p.subtitle {
+  .header-banner .subtitle {
     font-size: 18px;
   }
+}
+
+@media (min-width: 769px) {
+  .header-banner h1 {
+    font-size: 60px; /* larger on desktop */
+  }
   .header-banner .logo {
-    width: 100px;
+    width: 120px;
+  }
+  .header-banner .subtitle {
+    font-size: 24px;
   }
 }
