@@ -12,9 +12,9 @@ body {
 /* ----- Header Banner ----- */
 .header-banner {
   position: relative;
-  height: 280px; /* slightly smaller */
+  height: 280px;
   background: url("images/logo.png") no-repeat center center;
-  background-size: contain; /* logo fits nicely */
+  background-size: contain;
   display: flex;
   align-items: center;
   justify-content: center;
