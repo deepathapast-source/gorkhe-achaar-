@@ -1,126 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gorkhe Achaar</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* ----- Body & Main Background ----- */
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: url("images/himalaya.jpg") no-repeat center center fixed;
-      background-size: cover;
-    }
-
-    /* ----- Header Banner ----- */
-    .header-banner {
-      position: relative;
-      height: 300px;
-      background: url("images/header-bg.jpg") no-repeat center center;
-      background-size: cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-
-    .header-banner .overlay {
-      background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
-      color: white;
-      padding: 20px;
-      border-radius: 10px;
-    }
-
-    .header-banner h1 {
-      color: maroon;
-      font-size: 42px;
-      margin-bottom: 5px;
-    }
-
-    .header-banner p {
-      font-size: 16px;
-      margin-bottom: 10px;
-    }
-
-    .header-banner .logo {
-      width: 80px;
-      height: auto;
-      margin: 10px 0;
-    }
-
-    .header-banner .manufacturer {
-      font-size: 14px;
-      line-height: 1.4;
-      margin-top: 10px;
-    }
-
-    /* ----- Products Grid ----- */
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      padding: 20px;
-    }
-
-    .product {
-      background: rgba(255,255,255,0.9);
-      padding: 15px;
-      border-radius: 10px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .image-wrapper {
-      width: 180px;
-      height: 180px;
-      overflow: hidden;
-      margin: 5px auto;
-      border-radius: 8px;
-    }
-
-    .image-wrapper img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    select {
-      padding: 5px;
-      margin: 5px 0;
-    }
-
-    button {
-      background: maroon;
-      color: white;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    /* ----- Video Section ----- */
-    .video-section {
-      text-align: center;
-      padding: 20px;
-      margin: 20px;
-      background: rgba(255,255,255,0.85);
-      border-radius: 10px;
-    }
-
-    .video-section video {
-      max-width: 100%;
-      border-radius: 10px;
-    }
-  </style>
 </head>
 <body>
 
-  <!-- Header -->
+  <!-- Header Banner -->
   <header class="header-banner">
     <div class="overlay">
       <img src="images/logo.png" alt="Gorkhe Achaar Logo" class="logo">
@@ -227,11 +116,12 @@
     </video>
   </div>
 
-<!-- Footer -->
-<div class="footer">
-  For any complaints, suggestions, bulk order and whole sellers - contact on email: <strong>regalsales0@gmail.com</strong> or call <strong>7007408361</strong>
-</div>
+  <!-- Footer Section -->
+  <div class="footer">
+    For any complaints, suggestions, bulk order and whole sellers - contact on email: <strong>regalsales0@gmail.com</strong> or call <strong>7007408361</strong>
+  </div>
 
+  <!-- Scripts -->
   <script>
     function updatePrice(selectElement){
       const price = selectElement.value;
