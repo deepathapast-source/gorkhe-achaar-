@@ -4,12 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gorkhe Achaar</title>
-
+  
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <!-- Your CSS -->
   <link rel="stylesheet" href="style.css">
   <style>
     /* ----- Body & Main Background ----- */
@@ -23,9 +21,7 @@
     /* ----- Header Banner ----- */
     .header-banner {
       position: relative;
-      height: 300px;
-      background: url("images/bg.jpg") no-repeat center center;
-      background-size: cover;
+      height: 320px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -33,59 +29,41 @@
     }
 
     .header-banner .overlay {
-      background: rgba(0,0,0,0.5);
+      position: relative;
+      background: url("images/logo.png") no-repeat center center;
+      background-size: contain;
+      padding: 40px 20px 20px 20px;
       border-radius: 10px;
-      padding: 25px 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      min-width: 250px;
+      max-width: 90%;
     }
 
-    /* Logo above heading */
-    .header-banner .logo {
-      width: 100px;
-      height: auto;
-      margin-bottom: 15px;
-      z-index: 2;
-    }
-
-    /* Main Heading */
     .header-banner h1 {
-      font-family: 'Anton', 'Impact', sans-serif;
-      font-size: 50px;
+      font-family: 'Anton', sans-serif;
+      font-size: 52px;
       color: maroon;
+      margin: 10px 0 5px 0;
       -webkit-text-stroke: 1.5px #FFDB58;
       text-stroke: 1.5px #FFDB58;
-      margin: 5px 0;
       line-height: 1.1;
     }
 
-    /* Responsive heading for mobile */
-    @media (max-width: 768px) {
-      .header-banner h1 {
-        font-size: 40px;
-      }
-      .header-banner .logo {
-        width: 80px;
-      }
-    }
-
-    /* Subtitle */
     .header-banner .subtitle {
       font-family: 'Great Vibes', cursive;
-      color: deepskyblue;
       font-size: 20px;
-      margin-bottom: 10px;
+      color: deepskyblue;
+      margin: 0 0 10px 0;
     }
 
-    /* Manufacturer Info */
     .header-banner .manufacturer {
       font-size: 14px;
-      line-height: 1;
+      line-height: 1.1;
       color: white;
       text-align: center;
-      margin-top: 10px;
     }
 
     /* ----- Products Grid ----- */
@@ -138,7 +116,7 @@
     .video-section {
       text-align: center;
       padding: 20px;
-      margin: 20px 20px 10px 20px;
+      margin: 10px 20px;
       background: rgba(255,255,255,0.85);
       border-radius: 10px;
     }
@@ -150,13 +128,26 @@
 
     /* ----- Footer ----- */
     .footer {
-      background: rgba(0,0,0,0.6);
-      color: white;
       text-align: center;
-      padding: 15px 10px;
       font-size: 14px;
+      padding: 15px 20px;
+      background: rgba(0,0,0,0.7);
+      color: white;
     }
 
+    /* ----- Responsive ----- */
+    @media (max-width: 768px) {
+      .header-banner h1 {
+        font-size: 40px;
+      }
+      .header-banner .subtitle {
+        font-size: 18px;
+      }
+      .image-wrapper {
+        width: 140px;
+        height: 140px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -164,7 +155,6 @@
   <!-- Header Banner -->
   <header class="header-banner">
     <div class="overlay">
-      <img src="images/logo.png" alt="Gorkhe Achaar Logo" class="logo">
       <h1>Gorkhe Achaar</h1>
       <p class="subtitle">Authentic Himalayan Pickles & Fermented Delicacies</p>
       <div class="manufacturer">
@@ -178,7 +168,83 @@
 
   <!-- Products Grid -->
   <div class="products">
-    <!-- Paste your product cards here -->
+    <!-- Dalle Khursani -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/dalle1.jpg" alt="Dalle Khursani"></div>
+      <div class="image-wrapper"><img src="images/dalle2.jpg" alt="Dalle Khursani"></div>
+      <h3>Dalle Khursani Achaar</h3>
+      <select onchange="updatePrice(this)">
+        <option value="180">250g – ₹180</option>
+        <option value="320">500g – ₹320</option>
+      </select>
+      <p>Price: ₹<span>180</span></p>
+      <button onclick="orderNow('Dalle Khursani Achaar')">Order Now</button>
+    </div>
+
+    <!-- Baas Ko Achaar -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/baas1.jpg" alt="Baas Ko Achaar"></div>
+      <div class="image-wrapper"><img src="images/baas2.jpg" alt="Baas Ko Achaar"></div>
+      <h3>Baas Ko Achaar</h3>
+      <select onchange="updatePrice(this)">
+        <option value="200">250g – ₹200</option>
+        <option value="360">500g – ₹360</option>
+      </select>
+      <p>Price: ₹<span>200</span></p>
+      <button onclick="orderNow('Baas Ko Achaar')">Order Now</button>
+    </div>
+
+    <!-- Sungur Ko Achaar -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/sungur1.jpg" alt="Sungur Ko Achaar"></div>
+      <div class="image-wrapper"><img src="images/sungur2.jpg" alt="Sungur Ko Achaar"></div>
+      <h3>Sungur Ko Achaar</h3>
+      <select onchange="updatePrice(this)">
+        <option value="220">250g – ₹220</option>
+        <option value="400">500g – ₹400</option>
+      </select>
+      <p>Price: ₹<span>220</span></p>
+      <button onclick="orderNow('Sungur Ko Achaar')">Order Now</button>
+    </div>
+
+    <!-- Mula Ko Achaar -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/mula1.jpg" alt="Mula Ko Achaar"></div>
+      <div class="image-wrapper"><img src="images/mula2.jpg" alt="Mula Ko Achaar"></div>
+      <h3>Mula Ko Achaar</h3>
+      <select onchange="updatePrice(this)">
+        <option value="150">250g – ₹150</option>
+        <option value="280">500g – ₹280</option>
+      </select>
+      <p>Price: ₹<span>150</span></p>
+      <button onclick="orderNow('Mula Ko Achaar')">Order Now</button>
+    </div>
+
+    <!-- Titaura -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/titaura1.jpg" alt="Titaura"></div>
+      <div class="image-wrapper"><img src="images/titaura2.jpg" alt="Titaura"></div>
+      <h3>Titaura</h3>
+      <select onchange="updatePrice(this)">
+        <option value="100">250g – ₹100</option>
+        <option value="180">500g – ₹180</option>
+      </select>
+      <p>Price: ₹<span>100</span></p>
+      <button onclick="orderNow('Titaura')">Order Now</button>
+    </div>
+
+    <!-- Kinema -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/kinema1.jpg" alt="Kinema"></div>
+      <div class="image-wrapper"><img src="images/kinema2.jpg" alt="Kinema"></div>
+      <h3>Kinema</h3>
+      <select onchange="updatePrice(this)">
+        <option value="120">250g – ₹120</option>
+        <option value="220">500g – ₹220</option>
+      </select>
+      <p>Price: ₹<span>120</span></p>
+      <button onclick="orderNow('Kinema')">Order Now</button>
+    </div>
   </div>
 
   <!-- Video Section -->
@@ -192,9 +258,10 @@
 
   <!-- Footer -->
   <div class="footer">
-    For any complaints, suggestions, bulk order and whole sellers- contact on email: regalsales0@gmail.com or call 7007408361
+    For any complaints, suggestions, bulk order and whole sellers - contact on email - regalsales0@gmail.com or call 7007408361
   </div>
 
+  <!-- JS Functions -->
   <script>
     function updatePrice(selectElement){
       const price = selectElement.value;
