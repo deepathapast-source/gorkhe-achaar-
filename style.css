@@ -56,9 +56,10 @@ body {
 }
 
 /* Manufacturer Info */
-.header-banner .manufacturer {
+.header-banner .manufacturer p {
+  margin: 2px 0;  /* top & bottom margin reduced */
   font-size: 14px;
-  line-height: 0.9; /* tight spacing */
+  line-height: 1; /* tight spacing */
   color: white;
   text-align: center;
   margin-top: 10px;
