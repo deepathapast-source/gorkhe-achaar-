@@ -6,7 +6,7 @@
   <title>Gorkhe Achaar</title>
   <link rel="stylesheet" href="style.css">
   <style>
-    /* ----- Background & Body ----- */
+    /* ----- Body & Main Background ----- */
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -14,22 +14,46 @@
       background-size: cover;
     }
 
-    /* ----- Header ----- */
-    header {
+    /* ----- Header Banner ----- */
+    .header-banner {
+      position: relative;
+      height: 300px;
+      background: url("images/header-bg.jpg") no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 25px;
-      background: rgba(255,255,255,0.85);
     }
 
-    header h1 {
+    .header-banner .overlay {
+      background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .header-banner h1 {
       color: maroon;
-      font-size: 40px;
+      font-size: 42px;
       margin-bottom: 5px;
     }
 
-    header p {
+    .header-banner p {
       font-size: 16px;
-      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .header-banner .logo {
+      width: 80px;
+      height: auto;
+      margin: 10px 0;
+    }
+
+    .header-banner .manufacturer {
+      font-size: 14px;
+      line-height: 1.4;
+      margin-top: 10px;
     }
 
     /* ----- Products Grid ----- */
@@ -96,9 +120,18 @@
 <body>
 
   <!-- Header -->
-  <header>
-    <h1>Gorkhe Achaar</h1>
-    <p>Authentic Himalayan Pickles & Fermented Delicacies</p>
+  <header class="header-banner">
+    <div class="overlay">
+      <h1>Gorkhe Achaar</h1>
+      <p>Authentic Himalayan Pickles & Fermented Delicacies</p>
+      <img src="images/logo.png" alt="Gorkhe Achaar Logo" class="logo">
+      <div class="manufacturer">
+        <p><strong>Manufactured by:</strong></p>
+        <p>REGAL SALES</p>
+        <p>Malbazar, Jalpaiguri</p>
+        <p>West Bengal, PIN- 735230</p>
+      </div>
+    </div>
   </header>
 
   <!-- Products Grid -->
@@ -196,12 +229,17 @@
   <script>
     function updatePrice(selectElement){
       const price = selectElement.value;
-      const pTag = selectElement.parentElement.querySelector('span');
-      pTag.textContent = price;
+      const productCard = selectElement.closest(".product");
+      const priceSpan = productCard.querySelector("p span");
+      if(priceSpan){
+        priceSpan.textContent = price;
+      }
     }
 
     function orderNow(productName){
-      alert("Order placed for " + productName + "!\n(Implement payment/WhatsApp flow next.)");
+      const msg = `Hello, I want to order:\nProduct: ${productName}`;
+      const url = "https://wa.me/919832063165?text=" + encodeURIComponent(msg);
+      window.open(url, "_blank");
     }
   </script>
 
