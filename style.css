@@ -57,7 +57,7 @@ body {
 /* Manufacturer Info */
 .header-banner .manufacturer {
   font-size: 14px;
-  line-height: 0.9; /* reduced line spacing */
+  line-height: 0.4; /* reduced line spacing */
   text-align: center;
 }
 
