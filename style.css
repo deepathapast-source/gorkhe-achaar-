@@ -39,10 +39,11 @@ section {
 }
 
 .product img {
-  width: 130px;
-  height: auto;
+  width: 100%;       /* makes it fill the product card width */
+  max-width: 200px;  /* maximum width to keep all images uniform */
+  height: auto;      /* maintain aspect ratio */
   border-radius: 8px;
-  margin-right: 10px;
+  margin-bottom: 10px;
 }
 
 button {
@@ -64,6 +65,9 @@ button {
   padding: 15px;
   border-radius: 10px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .container {
