@@ -129,4 +129,6 @@ button {
   background: rgba(0,0,0,0.6);
   color: white;
   font-size: 14px;
+  margin-top: 20px;
+  border-radius: 8px;
 }
