@@ -12,7 +12,7 @@ body {
 /* ----- Header Banner ----- */
 .header-banner {
   position: relative;
-  height: 350px; /* enough for overlay content */
+  height: 300px; /* slightly smaller header */
   background: url("images/header-bg.jpg") no-repeat center center;
   background-size: cover;
   display: flex;
@@ -21,25 +21,28 @@ body {
   text-align: center;
 }
 
+/* ----- Overlay using Logo as background ----- */
 .header-banner .overlay {
-  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
-  padding: 30px 20px; /* top & bottom padding */
+  background: url("images/logo.png") no-repeat center center;
+  background-size: contain; /* scales logo nicely inside overlay */
+  padding: 20px 20px; /* reduced overlay height */
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-width: 250px; /* ensures overlay doesn’t collapse */
 }
 
 /* ----- Main Heading (Gorkhe Achaar) ----- */
 .header-banner h1 {
-  font-family: 'Anton', 'Impact', sans-serif; /* bold font */
-  font-size: 56px;                             /* larger size */
+  font-family: 'Anton', 'Impact', sans-serif;
+  font-size: 64px; /* slightly larger */
   color: maroon;
-  -webkit-text-stroke: 1.5px #FFDB58;         /* mustard outline */
+  -webkit-text-stroke: 1.5px #FFDB58; /* mustard outline */
   text-stroke: 1.5px #FFDB58;
-  margin-top: 40px;     /* moves heading lower inside overlay */
-  margin-bottom: 15px;  /* spacing below */
+  margin-top: 30px; /* slightly lower inside overlay */
+  margin-bottom: 10px;
   line-height: 1.1;
   text-align: center;
 }
@@ -47,23 +50,17 @@ body {
 /* ----- Subtitle ----- */
 .header-banner p {
   font-size: 18px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   color: white;
-}
-
-/* ----- Logo ----- */
-.header-banner .logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 15px;
 }
 
 /* ----- Manufacturer Info ----- */
 .header-banner .manufacturer {
   font-size: 14px;
-  line-height: 1.4;
+  line-height: 0.8; /* closer lines */
   text-align: center;
   color: white;
+  margin-top: 10px;
 }
 
 /* ----- Products Grid ----- */
