@@ -9,37 +9,13 @@ body {
   background-attachment: fixed;
 }
 
-/* ----- Header ----- */
-header {
-  background: rgba(255, 255, 255, 0.85);
-  padding: 25px;
-  text-align: center;
-}
-
-header h1 {
-  color: maroon;
-  font-size: 36px;
-  margin-bottom: 5px;
-}
-
-header p {
-  font-size: 16px;
-  color: #444;
-}
-
-/* ----- Section / Container ----- */
-section, .container {
-  background: rgba(255, 255, 255, 0.85);
-  margin: 20px;
-  padding: 20px;
-  border-radius: 10px;
-}
-
 /* ----- Products Grid ----- */
 .products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
+  padding: 20px;
+  margin-top: 20px;
 }
 
 /* ----- Individual Product Card ----- */
@@ -55,17 +31,17 @@ section, .container {
 
 /* ----- Product Images ----- */
 .image-wrapper {
-  width: 180px;          /* fixed width for all images */
-  height: 180px;         /* fixed height for all images */
-  overflow: hidden;      /* crops excess parts */
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
   border-radius: 8px;
-  margin: 5px auto;      /* centers images inside product card */
+  margin: 5px auto;
 }
 
 .image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* fills container, keeps aspect ratio, crops if needed */
+  object-fit: cover;
   margin-bottom: 10px;
 }
 
@@ -98,6 +74,7 @@ select {
   max-width: 100%;
   border-radius: 10px;
 }
+
 /* ----- Header Banner ----- */
 .header-banner {
   position: relative;
@@ -111,14 +88,14 @@ select {
 }
 
 .header-banner .overlay {
-  background: rgba(0, 0, 0, 0.5); /* dark overlay for text visibility */
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   padding: 20px;
   border-radius: 10px;
 }
 
 .header-banner h1 {
-  color: #ff4d4d; /* or maroon */
+  color: maroon;
   font-size: 42px;
   margin-bottom: 5px;
 }
@@ -128,14 +105,12 @@ select {
   margin-bottom: 10px;
 }
 
-/* Logo */
 .header-banner .logo {
   width: 80px;
   height: auto;
   margin: 10px 0;
 }
 
-/* Manufacturer Info */
 .header-banner .manufacturer {
   font-size: 14px;
   line-height: 1.4;
