@@ -9,6 +9,63 @@ body {
   background-attachment: fixed;
 }
 
+/* ----- Header Banner ----- */
+.header-banner {
+  position: relative;
+  height: 350px; /* enough for overlay content */
+  background: url("images/header-bg.jpg") no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-banner .overlay {
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent dark overlay */
+  padding: 30px 20px; /* top & bottom padding */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ----- Main Heading (Gorkhe Achaar) ----- */
+.header-banner h1 {
+  font-family: 'Anton', 'Impact', sans-serif; /* bold font */
+  font-size: 56px;                             /* larger size */
+  color: maroon;
+  -webkit-text-stroke: 1.5px #FFDB58;         /* mustard outline */
+  text-stroke: 1.5px #FFDB58;
+  margin-top: 20px;     /* moves heading lower inside overlay */
+  margin-bottom: 15px;  /* spacing below */
+  line-height: 1.1;
+  text-align: center;
+}
+
+/* ----- Subtitle ----- */
+.header-banner p {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+/* ----- Logo ----- */
+.header-banner .logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+/* ----- Manufacturer Info ----- */
+.header-banner .manufacturer {
+  font-size: 14px;
+  line-height: 1.4;
+  text-align: center;
+  color: white;
+}
+
 /* ----- Products Grid ----- */
 .products {
   display: grid;
@@ -66,67 +123,11 @@ select {
   text-align: center;
   padding: 20px;
   margin: 20px;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(255,255,255,0.85);
   border-radius: 10px;
 }
 
 .video-section video {
   max-width: 100%;
   border-radius: 10px;
-}
-
-/* ----- Header Banner ----- */
-/* ----- Header Banner ----- */
-.header-banner {
-  position: relative;
-  height: 350px;
-  background: url("images/header-bg.jpg") no-repeat center center;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-.header-banner .overlay {
-  background: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 30px 20px;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-/* ----- Main Heading ----- */
-.header-banner h1 {
-  font-family: 'Anton', 'Impact', sans-serif; /* bold, blocky font */
-  font-size: 56px;
-  margin-bottom: 15px;
-  color: maroon;  
-  -webkit-text-stroke: 1.5px #FFDB58; /* thinner outline for precision */
-  text-stroke: 1.5px #FFDB58;
-  text-align: center;
-  line-height: 1.1; /* tighter spacing for bold font */
-}
-
-/* ----- Subtitle ----- */
-.header-banner p {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-
-/* ----- Logo ----- */
-.header-banner .logo {
-  width: 100px;
-  height: auto;
-  margin-bottom: 15px;
-}
-
-/* ----- Manufacturer Info ----- */
-.header-banner .manufacturer {
-  font-size: 14px;
-  line-height: 1.4;
-  text-align: center;
 }
