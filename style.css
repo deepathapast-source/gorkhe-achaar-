@@ -1,31 +1,27 @@
-/* ----- Body & Main Background ----- */
+/* ----- Body & Page Background ----- */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url("images/himalaya.jpg");
+  background: url("images/himalaya.jpg") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 /* ----- Header Banner ----- */
 .header-banner {
   position: relative;
-  height: 280px; /* smaller height */
+  height: 280px; /* adjust as needed */
+  background: url("images/bg.jpg") no-repeat center center;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: url("images/himalaya.jpg") no-repeat center center;
-  background-size: cover;
 }
 
-/* Overlay box with logo background */
+/* Overlay box for heading + manufacturer */
 .header-banner .overlay {
-  background: url("images/logo.png") no-repeat center center;
-  background-size: contain;  /* fits logo inside overlay */
-  padding: 20px 30px;
+  background: rgba(0, 0, 0, 0.5); /* semi-transparent so bg.jpg is visible */
+  padding: 30px 20px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -34,33 +30,35 @@ body {
   color: white;
 }
 
+/* Logo on top of banner */
+.header-banner .logo {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
 /* Main Heading */
 .header-banner h1 {
   font-family: 'Anton', 'Impact', sans-serif;
-  font-size: 64px; /* larger font */
-  margin-top: 30px; /* push text lower */
-  margin-bottom: 5px;
+  font-size: 50px;
   color: maroon;
-  -webkit-text-stroke: 2px #FFDB58; /* mustard outline */
-  text-stroke: 2px #FFDB58;
+  -webkit-text-stroke: 1.5px #FFDB58; /* mustard outline */
+  text-stroke: 1.5px #FFDB58;
+  margin: 0 0 10px 0;
   line-height: 1.1;
-  text-align: center;
 }
 
 /* Subtitle */
 .header-banner p {
   font-size: 16px;
-  margin-bottom: 5px;
-  color: white;
+  margin-bottom: 10px;
 }
 
 /* Manufacturer Info */
 .header-banner .manufacturer {
   font-size: 14px;
-  line-height: 0.8; /* reduced spacing */
+  line-height: 0.9; /* reduced line spacing */
   text-align: center;
-  margin-top: 5px;
-  color: white;
 }
 
 /* ----- Products Grid ----- */
@@ -72,7 +70,6 @@ body {
   margin-top: 20px;
 }
 
-/* ----- Individual Product Card ----- */
 .product {
   background: rgba(255,255,255,0.9);
   padding: 15px;
@@ -83,23 +80,25 @@ body {
   align-items: center;
 }
 
-/* ----- Product Images ----- */
 .image-wrapper {
-  width: 180px;          /* fixed width for all images */
-  height: 180px;         /* fixed height for all images */
-  overflow: hidden;      /* crops excess parts */
-  border-radius: 8px;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
   margin: 5px auto;
+  border-radius: 8px;
 }
 
 .image-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;     /* fills container, keeps aspect ratio, crops if needed */
-  margin-bottom: 10px;
+  object-fit: cover;
 }
 
-/* ----- Buttons ----- */
+select {
+  padding: 5px;
+  margin: 5px 0;
+}
+
 button {
   background: maroon;
   color: white;
@@ -107,12 +106,6 @@ button {
   padding: 8px 14px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-/* ----- Select Dropdown ----- */
-select {
-  padding: 5px;
-  margin: 5px 0;
 }
 
 /* ----- Video Section ----- */
@@ -127,4 +120,13 @@ select {
 .video-section video {
   max-width: 100%;
   border-radius: 10px;
+}
+
+/* ----- Footer ----- */
+.footer {
+  text-align: center;
+  padding: 15px 20px;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  font-size: 14px;
 }
