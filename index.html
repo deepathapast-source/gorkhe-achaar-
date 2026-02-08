@@ -1,119 +1,209 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gorkhe Achaar</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* ----- Background & Body ----- */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("images/himalaya.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    /* ----- Header ----- */
+    header {
+      text-align: center;
+      padding: 25px;
+      background: rgba(255,255,255,0.85);
+    }
+
+    header h1 {
+      color: maroon;
+      font-size: 40px;
+      margin-bottom: 5px;
+    }
+
+    header p {
+      font-size: 16px;
+      color: #444;
+    }
+
+    /* ----- Products Grid ----- */
+    .products {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .product {
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .image-wrapper {
+      width: 180px;
+      height: 180px;
+      overflow: hidden;
+      margin: 5px auto;
+      border-radius: 8px;
+    }
+
+    .image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    select {
+      padding: 5px;
+      margin: 5px 0;
+    }
+
+    button {
+      background: maroon;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    /* ----- Video Section ----- */
+    .video-section {
+      text-align: center;
+      padding: 20px;
+      margin: 20px;
+      background: rgba(255,255,255,0.85);
+      border-radius: 10px;
+    }
+
+    .video-section video {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Gorkhe Achaar</h1>
-  <p>Authentic Himalayan Pickles</p>
-</header>
+  <!-- Header -->
+  <header>
+    <h1>Gorkhe Achaar</h1>
+    <p>Authentic Himalayan Pickles & Fermented Delicacies</p>
+  </header>
 
-<section>
-  <h2>Our Products</h2>
-
+  <!-- Products Grid -->
   <div class="products">
 
-    <div class="card">
-      <img src="images/dalle1.jpg">
-      <img src="images/dalle2.jpg">
+    <!-- Dalle Khursani -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/dalle1.jpg" alt="Dalle Khursani"></div>
+      <div class="image-wrapper"><img src="images/dalle2.jpg" alt="Dalle Khursani"></div>
       <h3>Dalle Khursani Achaar</h3>
-
       <select onchange="updatePrice(this)">
-        <option value="160">125g – ₹160</option>
-        <option value="300">250g – ₹300</option>
+        <option value="180">250g – ₹180</option>
+        <option value="320">500g – ₹320</option>
       </select>
-
-      <p>Price: ₹<span>160</span></p>
+      <p>Price: ₹<span>180</span></p>
       <button onclick="orderNow('Dalle Khursani Achaar')">Order Now</button>
     </div>
-    
-    <div class="card">
-      <img src="images/baas1.jpg">
-      <img src="images/baas2.jpg">
+
+    <!-- Baas Ko Achaar -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/baas1.jpg" alt="Baas Ko Achaar"></div>
+      <div class="image-wrapper"><img src="images/baas2.jpg" alt="Baas Ko Achaar"></div>
       <h3>Baas Ko Achaar</h3>
-
       <select onchange="updatePrice(this)">
-        <option value="220">125g – ₹220</option>
-        <option value="400">250g – ₹400</option>
+        <option value="200">250g – ₹200</option>
+        <option value="360">500g – ₹360</option>
       </select>
-
-      <p>Price: ₹<span>220</span></p>
+      <p>Price: ₹<span>200</span></p>
       <button onclick="orderNow('Baas Ko Achaar')">Order Now</button>
     </div>
-    
-    <div class="card">
-      <img src="images/mula1.jpg">
-      <img src="images/mula2.jpg">
-      <h3>Mula Ko Achaar</h3>
 
+    <!-- Sungur Ko Achaar -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/sungur1.jpg" alt="Sungur Ko Achaar"></div>
+      <div class="image-wrapper"><img src="images/sungur2.jpg" alt="Sungur Ko Achaar"></div>
+      <h3>Sungur Ko Achaar</h3>
       <select onchange="updatePrice(this)">
-        <option value="110">125g – ₹110</option>
-        <option value="200">250g – ₹200</option>
+        <option value="220">250g – ₹220</option>
+        <option value="400">500g – ₹400</option>
       </select>
+      <p>Price: ₹<span>220</span></p>
+      <button onclick="orderNow('Sungur Ko Achaar')">Order Now</button>
+    </div>
 
-      <p>Price: ₹<span>110</span></p>
+    <!-- Mula Ko Achaar -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/mula1.jpg" alt="Mula Ko Achaar"></div>
+      <div class="image-wrapper"><img src="images/mula2.jpg" alt="Mula Ko Achaar"></div>
+      <h3>Mula Ko Achaar</h3>
+      <select onchange="updatePrice(this)">
+        <option value="150">250g – ₹150</option>
+        <option value="280">500g – ₹280</option>
+      </select>
+      <p>Price: ₹<span>150</span></p>
       <button onclick="orderNow('Mula Ko Achaar')">Order Now</button>
     </div>
-    
-    <div class="card">
-      <img src="images/sungur1.jpg">
-      <img src="images/sungur2.jpg">
-      <h3>Sungur Ko Achaar</h3>
 
-      <select onchange="updatePrice(this)">
-        <option value="220">125g – ₹220</option>
-        <option value="400">250g – ₹400</option>
-      </select>
-
-      <p>Price: ₹<span>220</span></p>
-      <button onclick="orderNow('Sumgur Ko Achaar')">Order Now</button>
-    </div>
-    
-    <div class="card">
-      <img src="images/titaura1.jpg">
-      <img src="images/titaura2.jpg">
+    <!-- Titaura -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/titaura1.jpg" alt="Titaura"></div>
+      <div class="image-wrapper"><img src="images/titaura2.jpg" alt="Titaura"></div>
       <h3>Titaura</h3>
-
       <select onchange="updatePrice(this)">
-        <option value="120">125g – ₹120</option>
-        <option value="200">250g – ₹200</option>
+        <option value="100">250g – ₹100</option>
+        <option value="180">500g – ₹180</option>
       </select>
-
-      <p>Price: ₹<span>120</span></p>
+      <p>Price: ₹<span>100</span></p>
       <button onclick="orderNow('Titaura')">Order Now</button>
     </div>
 
-    <div class="card">
-      <img src="images/kinema1.jpg">
-      <img src="images/kinema2.jpg">
-      <h3>Kinema Ko Achaar</h3>
-
+    <!-- Kinema -->
+    <div class="product">
+      <div class="image-wrapper"><img src="images/kinema1.jpg" alt="Kinema"></div>
+      <div class="image-wrapper"><img src="images/kinema2.jpg" alt="Kinema"></div>
+      <h3>Kinema</h3>
       <select onchange="updatePrice(this)">
-        <option value="160">125g – ₹160</option>
-        <option value="300">250g – ₹300</option>
+        <option value="120">250g – ₹120</option>
+        <option value="220">500g – ₹220</option>
       </select>
-
-      <p>Price: ₹<span>160</span></p>
-      <button onclick="orderNow('Kinema Ko Achaar')">Order Now</button>
+      <p>Price: ₹<span>120</span></p>
+      <button onclick="orderNow('Kinema')">Order Now</button>
     </div>
-    
+
   </div>
-</section>
 
-<section>
-  <h2>How We Make It</h2>
-  <video width="100%" controls>
-    <source src="images/process.mp4" type="video/mp4">
-  </video>
-</section>
+  <!-- Video Section -->
+  <div class="video-section">
+    <h2>How We Make Gorkhe Achaar</h2>
+    <video controls>
+      <source src="images/pickle-process.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
-<script src="script.js"></script>
+  <script>
+    function updatePrice(selectElement){
+      const price = selectElement.value;
+      const pTag = selectElement.parentElement.querySelector('span');
+      pTag.textContent = price;
+    }
+
+    function orderNow(productName){
+      alert("Order placed for " + productName + "!\n(Implement payment/WhatsApp flow next.)");
+    }
+  </script>
+
 </body>
 </html>
-
-
